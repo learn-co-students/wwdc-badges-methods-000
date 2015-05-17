@@ -13,5 +13,10 @@
 @property (strong, nonatomic) UIWindow *window;
 
 //declare methods here:
+-(NSString *)badgeMaker:(NSString *)attendee;
+
+-(NSArray *)batchBadgeCreator:(NSArray *)attendees;
+
+-(NSArray *)assignRooms:(NSArray *)attendees;
 
 @end
