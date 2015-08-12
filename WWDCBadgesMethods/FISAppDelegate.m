@@ -23,27 +23,40 @@
 }
 
     - (NSMutableArray *)makeAllBadgesForSpeakers:(NSArray *)speakers; {
-
-
         
-        for (NSUInteger i = 0; i < 8; i++) {
+        NSMutableArray *allBadges = [NSMutableArray new];
+        
+        for (NSUInteger i = 0; i < 8; i++)
+        {
         
             NSString *name = speakers[i];
             NSMutableString *greetings = [@"Hello, my name is" mutableCopy];
             [greetings appendFormat:@" %@.", name];
-        
-            NSMutableArray *allBadges = [NSMutableArray array];
             [allBadges addObject:greetings];
         
-            return allBadges;
         }
-       return nil;
+        
+       return allBadges;
   
 }
  
 
     - (NSMutableArray *)greetAndAssignRoomsToSpeakers:(NSArray *)speakers; {
-    return nil;
+      
+        NSMutableArray *allSpeakersAndRoom = [NSMutableArray new];
+        
+        for (NSInteger i = 0; i < 8; i++)
+        {
+            
+            NSString *name = speakers[i];
+            NSInteger roomNumber = i+1;
+            NSMutableString *greetings = [[NSMutableString alloc] init];
+            [greetings appendFormat:@"Welcome, %@! You'll be in dressing room %lu.", name, roomNumber];
+            [allSpeakersAndRoom addObject:greetings];
+            
+        }
+        
+        return allSpeakersAndRoom;
 }
 
 @end
