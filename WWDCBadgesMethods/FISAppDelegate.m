@@ -22,7 +22,7 @@
         return greetings;
 }
 
-    - (NSMutableArray *)makeAllBadgesForSpeakers:(NSArray *)speakers; {
+/*    - (NSMutableArray *)makeAllBadgesForSpeakers:(NSArray *)speakers; {
         
         NSMutableArray *allBadges = [NSMutableArray new];
         
@@ -38,8 +38,28 @@
         
        return allBadges;
   
+}*/
+
+
+   - (NSMutableArray *)makeAllBadgesForSpeakers:(NSArray *)speakers; {
+    
+    FISAppDelegate *greeting = [[FISAppDelegate alloc] init];
+    NSMutableArray *allBadges = [NSMutableArray new];
+    
+    for (NSUInteger i = 0; i < 8; i++)
+    {
+        
+        NSString *name = speakers[i];
+        NSString *fullGreetings = [greeting makeBadgeForSpeaker: name];
+        [allBadges addObject:fullGreetings];
+
+    }
+    
+    return allBadges;
+    
 }
- 
+
+
 
     - (NSMutableArray *)greetAndAssignRoomsToSpeakers:(NSArray *)speakers; {
       
