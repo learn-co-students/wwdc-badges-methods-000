@@ -64,7 +64,7 @@ describe(@"FISAppDelegate", ^{
     
     describe(@"greetAndAssignRoomsToSpeakers", ^{
         it(@"should return a list of welcome messages and room assignments",^{
-            expect([appDelegate greeetingsAndRoomAssignmentsForSpeakers:speakers]).to.equal(roomAssignments);
+            expect([appDelegate greetingsAndRoomAssignmentsForSpeakers:speakers]).to.equal(roomAssignments);
         });
     });
     
