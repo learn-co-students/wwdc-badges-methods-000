@@ -55,6 +55,12 @@ describe(@"FISAppDelegate", ^{
             expect([appDelegate badgeForSpeaker:@"Inigo Montoya"]).to.equal(@"Hello, my name is Inigo Montoya.");
         });
     });
+
+    describe(@"greetingsAndRoomAssignmentsForSpeakers:", ^{
+        it(@"should return a list of welcome messages and room assignments",^{
+            expect([appDelegate greetingsAndRoomAssignmentsForSpeakers:speakers]).to.equal(roomAssignments);
+        });
+    });
     
     describe(@"badgesForSpeakers:", ^{
         it(@"should return a list of badge messages",^{
@@ -62,11 +68,7 @@ describe(@"FISAppDelegate", ^{
         });
     });
     
-    describe(@"greetingsAndRoomAssignmentsForSpeakers:", ^{
-        it(@"should return a list of welcome messages and room assignments",^{
-            expect([appDelegate greetingsAndRoomAssignmentsForSpeakers:speakers]).to.equal(roomAssignments);
-        });
-    });
+
     
 });
 
